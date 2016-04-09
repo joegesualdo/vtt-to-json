@@ -1,0 +1,24 @@
+{
+  "name": "vtt-to-json",
+  "version": "0.0.1",
+  "description": "Convert VTT file to JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": "joegesualdo/vtt-to-json",
+  "keywords": [
+    "vtt",
+    "json",
+    "subtitles"
+  ],
+  "author": {
+    "name": "Joe Gesualdo"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "dependencies": {}
+}

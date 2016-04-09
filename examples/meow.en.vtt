@@ -1,0 +1,84 @@
+WEBVTT
+Kind: captions
+Language: en
+Style:
+::cue(c.colorCCCCCC) { color: rgb(204,204,204);
+ }
+::cue(c.colorE5E5E5) { color: rgb(229,229,229);
+ }
+##
+
+00:00:00.000 --> 00:00:00.820 align:start position:0%
+ 
+ 
+the<00:00:00.240><c> man</c><00:00:00.459><c> who</c><00:00:00.530><c> inspired</c><00:00:00.789><c> the</c>
+
+00:00:00.820 --> 00:00:01.220 align:start position:0%
+ 
+the man who inspired the
+ 
+
+00:00:01.220 --> 00:00:02.710 align:start position:0%
+ 
+the man who inspired the
+character<00:00:01.350><c> Gordon</c><c.colorE5E5E5><00:00:01.880><c> Gekko</c></c><c.colorCCCCCC><00:00:02.409><c> Asher</c></c>
+
+00:00:02.710 --> 00:00:03.110 align:start position:0%
+the man who inspired the
+character Gordon<c.colorE5E5E5> Gekko</c><c.colorCCCCCC> Asher
+ </c>
+
+00:00:03.110 --> 00:00:04.529 align:start position:0%
+the man who inspired the
+character Gordon<c.colorE5E5E5> Gekko</c><c.colorCCCCCC> Asher
+edelman<00:00:03.770><c> recently</c></c><00:00:04.420><c> had</c><00:00:04.529><c> an</c>
+
+00:00:04.529 --> 00:00:04.640 align:start position:0%
+character Gordon<c.colorE5E5E5> Gekko</c><c.colorCCCCCC> Asher
+edelman recently</c> had an
+ 
+
+00:00:04.640 --> 00:00:06.230 align:start position:0%
+character Gordon<c.colorE5E5E5> Gekko</c><c.colorCCCCCC> Asher
+edelman recently</c> had an
+interview<00:00:04.850><c> with</c><00:00:05.020><c> CNBC</c><c.colorE5E5E5><00:00:05.819><c> and</c></c><00:00:06.230><c> he</c>
+
+00:00:06.230 --> 00:00:06.430 align:start position:0%
+<c.colorCCCCCC>edelman recently</c> had an
+interview with CNBC<c.colorE5E5E5> and</c> he
+ 
+
+00:00:06.430 --> 00:00:07.519 align:start position:0%
+<c.colorCCCCCC>edelman recently</c> had an
+interview with CNBC<c.colorE5E5E5> and</c> he
+talked<00:00:06.759><c> about</c><00:00:06.799><c> who</c><00:00:07.120><c> he</c><00:00:07.350><c> believed</c>
+
+00:00:07.519 --> 00:00:07.919 align:start position:0%
+interview with CNBC<c.colorE5E5E5> and</c> he
+talked about who he believed
+ 
+
+00:00:07.919 --> 00:00:09.409 align:start position:0%
+interview with CNBC<c.colorE5E5E5> and</c> he
+talked about who he believed
+would<00:00:08.029><c> be</c><00:00:08.179><c> the</c><00:00:08.320><c> best</c><00:00:08.720><c> candidate</c><00:00:09.179><c> for</c>
+
+00:00:09.409 --> 00:00:09.809 align:start position:0%
+talked about who he believed
+would be the best candidate for
+ 
+
+00:00:09.809 --> 00:00:12.110 align:start position:0%
+talked about who he believed
+would be the best candidate for
+our<00:00:10.559><c> economy</c><c.colorCCCCCC><00:00:10.950><c> now</c></c><c.colorE5E5E5><00:00:11.759><c> this</c><00:00:12.000><c> is</c></c><00:00:12.110><c> an</c>
+
+00:00:12.110 --> 00:00:12.210 align:start position:0%
+would be the best candidate for
+our economy<c.colorCCCCCC> now</c><c.colorE5E5E5> this is</c> an
+ 
+
+00:00:12.210 --> 00:00:13.279 align:start position:0%
+would be the best candidate for
+our economy<c.colorCCCCCC> now</c><c.colorE5E5E5> this is</c> an
+interesting<c.colorCCCCCC><00:00:12.480><c> endorsement</c></c>

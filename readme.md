@@ -10,10 +10,11 @@ $ npm install --save vtt-to-json
 ```javascript
 const vttToJson = require("vtt-to-json")
 
-const fileLocation = __dirname + '/meow.en.vtt';
+let vttString = '...';
 
-vttToJson(fileName, function(err, obj){
-  console.log(obj)
+vttToJson(vttString)
+.then((result) => {
+  console.log(result)
 });
 ```
 
@@ -23,22 +24,23 @@ $ npm test
 ```
 
 ## API
-### `vttToJson(fileLocation, callback)`
+### `vttToJson(vttString)`
 > What does this method do?
 
 | Name | Type | Description |
 |------|------|-------------|
-| fileLocation | `String` | The location of the VTT file you want to convert 
-| callback | `function` | Called when the conversion is finished|
+| vttString| `String` | A string representing the vtt you want to convert. 
 
+returns `Promise` that passed the vtt json value.
 
 ```javascript
 const vttToJson = require("vtt-to-json")
 
-const fileLocation = __dirname + '/meow.en.vtt';
+let vttString = '...';
 
-vttToJson(fileName, function(err, obj){
-  console.log(obj)
+vttToJson(vttString)
+.then((result) => {
+  console.log(result)
 });
 ```
 

@@ -23,7 +23,7 @@ function convertVttToJson(vttString) {
         if (sections.length !== 0) {
           if (sections[sections.length - 1].part.replace(/<\/?[^>]+(>|$)/g, "") === line.replace(/<\/?[^>]+(>|$)/g, "")) {
           } else {
-            current.part = line.replace(/<\/?[^>]+(>|$)/g, "")
+            current.part = line
           }
         }
       }
@@ -63,6 +63,7 @@ function convertVttToJson(vttString) {
       }
     })
     section.words = resultsArray;
+    section.part = section.part.replace(/<\/?[^>]+(>|$)/g, "")
   })
     resolve(sections);
   })

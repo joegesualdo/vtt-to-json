@@ -12,8 +12,8 @@ function convertVttToJson(vttString) {
         sections.push(current)
       }
       current = {
-        start: line.split("-->")[0].trimRight().split(" ").pop(),
-        end: line.split("-->")[1].trimLeft().split(" ").shift(),
+        start: timeString2ms(line.split("-->")[0].trimRight().split(" ").pop()),
+        end: timeString2ms(line.split("-->")[1].trimLeft().split(" ").shift()),
         part: ''
       }
     } else if (line.replace(/<\/?[^>]+(>|$)/g, "") === ""){
@@ -68,5 +68,15 @@ function convertVttToJson(vttString) {
     resolve(sections);
   })
 }
+
+// helpers
+//   http://codereview.stackexchange.com/questions/45335/milliseconds-to-time-string-time-string-to-milliseconds
+function timeString2ms(a,b){// time(HH:MM:SS.mss) // optimized
+ return a=a.split('.'), // optimized
+  b=a[1]*1||0, // optimized
+  a=a[0].split(':'),
+  b+(a[2]?a[0]*3600+a[1]*60+a[2]*1:a[1]?a[0]*60+a[1]*1:a[0]*1)*1e3 // optimized
+}
+
 
 module.exports = convertVttToJson;

@@ -53,7 +53,7 @@ function convertVttToJson(vttString) {
         }
         resultsArray.push({
           word: item.split("==")[0],
-          time: item.split("==")[1],
+          time: timeString2ms(item.split("==")[1]),
         })
       } else {
         resultsArray.push({

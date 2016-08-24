@@ -2171,5 +2171,5 @@ other<00:06:45.410><c> great</c><00:06:45.620><c> videos</c>`
 //
 vttToJson(vttString)
 .then(sections => {
-  console.log(sections[0])
+  console.log(sections[1])
 });

@@ -52,12 +52,12 @@ function convertVttToJson(vttString) {
           return;
         }
         resultsArray.push({
-          word: item.split("==")[0],
+          word: cleanWord(item.split("==")[0]),
           time: timeString2ms(item.split("==")[1]),
         })
       } else {
         resultsArray.push({
-          word: item,
+          word: cleanWord(item),
           time: undefined,
         })
       }
@@ -76,6 +76,11 @@ function timeString2ms(a,b){// time(HH:MM:SS.mss) // optimized
   b=a[1]*1||0, // optimized
   a=a[0].split(':'),
   b+(a[2]?a[0]*3600+a[1]*60+a[2]*1:a[1]?a[0]*60+a[1]*1:a[0]*1)*1e3 // optimized
+}
+
+// removes everything but characters and apostrophe and dash
+function cleanWord(word) {
+  return word.replace(/[^0-9a-z'-]/gi, '')
 }
 
 

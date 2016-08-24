@@ -2185,7 +2185,7 @@ regime and will have to be
 // say I'm relieved to
 // see all of you.`
 //
-vttToJson(vttString)
+vttToJson(s)
 .then(sections => {
   console.log(sections)
 });

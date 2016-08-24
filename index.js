@@ -22,18 +22,18 @@ function convertVttToJson(vttString) {
       if (start){
         if (sections.length !== 0) {
           if (sections[sections.length - 1].part.replace(/<\/?[^>]+(>|$)/g, "") === line.replace(/<\/?[^>]+(>|$)/g, "")) {
-            console.log('no match')
+            // console.log('same')
+            // sections[sections.length - 1].part = line
+            // console.log('no match')
           } else {
             current.part = line
-            sections.push(current)
-            current = {
-            }
+            sections.push(clone(current))
+            current.part = ''
           }
         } else {
           current.part = line
-          sections.push(current)
-          current = {
-          }
+          sections.push(clone(current))
+          current.part = ''
         }
       }
     }
@@ -90,6 +90,15 @@ function timeString2ms(a,b){// time(HH:MM:SS.mss) // optimized
 // removes everything but characters and apostrophe and dash
 function cleanWord(word) {
   return word.replace(/[^0-9a-z'-]/gi, '')
+}
+
+function clone(obj) {
+    if (null == obj || "object" != typeof obj) return obj;
+    var copy = obj.constructor();
+    for (var attr in obj) {
+        if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+    }
+    return copy;
 }
 
 

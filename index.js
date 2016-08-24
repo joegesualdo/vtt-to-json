@@ -8,9 +8,9 @@ function convertVttToJson(vttString) {
     } else if (line.replace(/<\/?[^>]+(>|$)/g, "") == "") {
     } else if (line.indexOf('-->') !== -1) {
       start = true;
-      if (current.start) {
-        sections.push(current)
-      }
+      // if (current.start) {
+      //   sections.push(current)
+      // }
       current = {
         start: timeString2ms(line.split("-->")[0].trimRight().split(" ").pop()),
         end: timeString2ms(line.split("-->")[1].trimLeft().split(" ").shift()),
@@ -22,8 +22,17 @@ function convertVttToJson(vttString) {
       if (start){
         if (sections.length !== 0) {
           if (sections[sections.length - 1].part.replace(/<\/?[^>]+(>|$)/g, "") === line.replace(/<\/?[^>]+(>|$)/g, "")) {
+            console.log('no match')
           } else {
             current.part = line
+            sections.push(current)
+            current = {
+            }
+          }
+        } else {
+          current.part = line
+          sections.push(current)
+          current = {
           }
         }
       }

@@ -13,7 +13,7 @@ Style:
 
 00:00:00.000 --> 00:00:06.600 align:start position:0%
 
-Mr.<00:00:04.980><c> we</c><00:00:05.190><c> have</c><c.colorCCCCCC><00:00:05.400><c> Alex</c></c><00:00:06.060><c> on</c><00:00:06.270><c> media</c><c.colorE5E5E5><00:00:06.600><c> row</c></c>
+here<00:00:04.980><c> we</c><00:00:05.190><c> have</c><c.colorCCCCCC><00:00:05.400><c> Alex</c></c><00:00:06.060><c> on</c><00:00:06.270><c> media</c><c.colorE5E5E5><00:00:06.600><c> row</c></c>
 
 00:00:06.600 --> 00:00:06.899 align:start position:0%
 here we have<c.colorCCCCCC> Alex</c> on media<c.colorE5E5E5> row
@@ -38,6 +38,22 @@ at the<c.colorE5E5E5> RNC</c><c.colorCCCCCC> Alex</c> reaches the
 00:00:11.070 --> 00:00:12.570 align:start position:0%
 <c.colorCCCCCC>Mr. turks you to booth</c><c.colorE5E5E5> and</c> is
 instantly<00:00:11.580><c> met</c><00:00:11.910><c> by</c><00:00:12.150><c> a</c><00:00:12.179><c> group</c><00:00:12.570><c> of</c>`
+
+let vttString = `01:03:30.773 --> 01:03:36.679
+And if not then Russia
+will have shown itself
+
+01:03:36.679 --> 01:03:39.382
+very clearly to be an
+irresponsible actor on a
+
+01:03:39.382 --> 01:03:43.786
+world stage that is
+supporting a murderous
+
+01:03:43.786 --> 01:03:48.724
+regime and will have to be
+-- will have to answer to`
 
 // let vttString = `WEBVTT
 // Kind: captions
@@ -2169,7 +2185,7 @@ instantly<00:00:11.580><c> met</c><00:00:11.910><c> by</c><00:00:12.150><c> a</c
 // say I'm relieved to
 // see all of you.`
 //
-vttToJson(s)
+vttToJson(vttString)
 .then(sections => {
-  console.log(sections[sections.length - 2])
+  console.log(sections)
 });

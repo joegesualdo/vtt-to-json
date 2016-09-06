@@ -3,14 +3,17 @@ function convertVttToJson(vttString) {
   var current = {}
   var sections = []
   var start = false;
-   vttString.split('\n').forEach((line) => {
+  var vttArray = vttString.split('\n');
+   vttArray.forEach((line, index) => {
     if (line.replace(/<\/?[^>]+(>|$)/g, "") === " "){
     } else if (line.replace(/<\/?[^>]+(>|$)/g, "") == "") {
-    } else if (line.indexOf('-->') !== -1) {
+    } else if (line.indexOf('-->') !== -1 ) {
       start = true;
-      // if (current.start) {
-      //   sections.push(current)
-      // }
+
+      if (current.start) {
+        sections.push(clone(current))
+      }
+
       current = {
         start: timeString2ms(line.split("-->")[0].trimRight().split(" ").pop()),
         end: timeString2ms(line.split("-->")[1].trimLeft().split(" ").shift()),
@@ -22,13 +25,12 @@ function convertVttToJson(vttString) {
       if (start){
         if (sections.length !== 0) {
           if (sections[sections.length - 1].part.replace(/<\/?[^>]+(>|$)/g, "") === line.replace(/<\/?[^>]+(>|$)/g, "")) {
-            // console.log('same')
-            // sections[sections.length - 1].part = line
-            // console.log('no match')
           } else {
-            current.part = line
-            sections.push(clone(current))
-            current.part = ''
+            current.part = `${current.part} ${line}`
+            // If it's the last line of the subtitles
+            if (index === vttArray.length - 1) {
+              sections.push(clone(current))
+            }
           }
         } else {
           current.part = line

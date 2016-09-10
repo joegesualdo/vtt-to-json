@@ -95,7 +95,7 @@ function timeString2ms(a,b){// time(HH:MM:SS.mss) // optimized
 
 // removes everything but characters and apostrophe and dash
 function cleanWord(word) {
-  return word.replace(/[^0-9a-z'-]/gi, '')
+  return word.replace(/[^0-9a-z'-]/gi, '').toLowerCase()
 }
 
 function clone(obj) {

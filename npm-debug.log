@@ -5,7 +5,7 @@
 2 info using npm@3.9.6
 3 info using node@v6.2.1
 4 verbose publish [ '.' ]
-5 verbose stack Error: Invalid version: "0.0.11`"
+5 verbose stack Error: Invalid version: "0.1.0`"
 5 verbose stack     at Object.module.exports.fixVersionField (/Users/jgesualdo/.npm-packages/lib/node_modules/npm/node_modules/normalize-package-data/lib/fixer.js:191:13)
 5 verbose stack     at /Users/jgesualdo/.npm-packages/lib/node_modules/npm/node_modules/normalize-package-data/lib/normalize.js:32:38
 5 verbose stack     at Array.forEach (native)
@@ -21,7 +21,7 @@
 8 error argv "/usr/local/Cellar/node/6.2.1/bin/node" "/Users/jgesualdo/.npm-packages/bin/npm" "publish"
 9 error node v6.2.1
 10 error npm  v3.9.6
-11 error Invalid version: "0.0.11`"
+11 error Invalid version: "0.1.0`"
 12 error If you need help, you may report this error at:
 12 error     <https://github.com/npm/npm/issues>
 13 verbose exit [ 1, true ]
